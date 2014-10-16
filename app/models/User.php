@@ -9,7 +9,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
 
-	protected $fillable = array('user_id', 'Title', 'First_name', 'Surname', 'DOB', 'Street', 'Town', 'County', 'Postcode', 'Phone', 'Email', 'password', 'password_temp', 'Code', 'Active', 'created_at', 'updated_at');
+	protected $fillable = array();
 	/**
 	 * The database table used by the model.
 	 *

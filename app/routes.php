@@ -11,20 +11,21 @@
 |
 */
 
-//Authenticated group
-//Route::group(array('before' => 'auth'), function() {
+/*
+| Contact form (GET)
+*/
+Route::get('/', array('as' => 'contact', 'uses' => 'ContactController@getContact'));
 
-	//CSRF protection group
-	//Route::group(array('before' => 'csrf'), function() {
+/*
+| CSRF protection group
+|
+| Protects the form from cross-site forgeries
+*/
+Route::group(array('before' => 'csrf'), function() {
 
-Route::get('/', array('as' => 'index', 'uses' => 'HomeController@getIndex'));
+	/*
+	| Contact form (GET)
+	*/
+	Route::post('contact', array('as' => 'contact-post', 'uses' => 'ContactController@postContact'));
 
-Route::get('user', array('as' => 'user', 'uses' => 'HomeController@getUserpanel'));
-
-Route::get('signup', array('as' => 'signup', 'uses' => 'HomeController@getSignup'));
-
-Route::post('signup', array('as' => 'signup-post', 'uses' => 'AccountController@postSignup'));
-
-Route::get('income', array('as' => 'income', 'uses' => 'HomeController@getIncome'));
-
-Route::get('/account/activate/{code}', array('as' => 'account-activate', 'uses' => 'AccountController@getActivate'));
+});
