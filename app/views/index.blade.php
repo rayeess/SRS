@@ -13,7 +13,7 @@
 			
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="js/bootstrap.js"></script>
-	<!--I think it is working -->
+	<!--I think it is working and again-->
 		<!--[if IE]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 <script/>
